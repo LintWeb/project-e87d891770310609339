@@ -3,9 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-e87d891770310609339</title>
+    <title>Dastarkhwan - Authentic Afghan Cuisine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text fill="%23D2691E" font-size="20" y="50%">🍽️</text></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .rating {
+            display: inline-block;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .about, .menu, .contact {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+
+        .about h2, .menu h2, .contact h2 {
+            color: #8B4513;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-item h3 {
+            color: #D2691E;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            color: #D2691E;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .menu-placeholder {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .about, .menu, .contact {
+                padding: 2rem 1rem;
+            }
+
+            .info-grid, .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+    <header>
+        <nav class="container">
+            <div class="logo">Dastarkhwan</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Dastarkhwan</h1>
+                <p>Authentic Afghan Cuisine in the Heart of Chattogram</p>
+                <div class="rating">
+                    <span class="stars">★★★☆☆</span> 3.2 (10 reviews) • ৳400–600 per person
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Dastarkhwan</h2>
+            <p>Dastarkhwan is your premier destination for authentic Afghan cuisine in Chattogram. Our restaurant brings the rich flavors and traditions of Afghanistan to your table, offering a culinary journey through the heart of Central Asia.</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Authentic Afghan Cuisine</h3>
+                    <p>Experience the traditional flavors of Afghanistan, from savory kabobs to aromatic rice dishes and fresh flatbreads.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Quality Ingredients</h3>
+                    <p>We use only the finest, freshest ingredients to ensure every dish meets our high standards of excellence.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Welcoming Atmosphere</h3>
+                    <p>Enjoy your meal in our comfortable, family-friendly environment perfect for gatherings and celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-placeholder">
+                <p>Our complete menu features traditional Afghan dishes including:</p>
+                <ul style="list-style: none; padding: 2rem 0;">
+                    <li>• Grilled Kabobs and Koftas</li>
+                    <li>• Aromatic Rice Pilafs</li>
+                    <li>• Fresh Naan and Flatbreads</li>
+                    <li>• Traditional Afghan Soups and Stews</li>
+                    <li>• Fresh Salads and Appetizers</li>
+                    <li>• Authentic Afghan Desserts</li>
+                </ul>
+                <p><em>Menu subject to change. Please call ahead for current offerings.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i>📍</i>
+                    <div>
+                        <strong>Address:</strong><br>
+                        3rd Floor, FOUR FLAVORS<br>
+                        Mohammed Ali Rd, Chattogram 4000
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i>📞</i>
+                    <div>
+                        <strong>Phone & WhatsApp:</strong><br>
+                        01818-008888
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i>🕐</i>
+                    <div>
+                        <strong>Hours:</strong><br>
+                        Open · Closes at 12 AM
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i>⭐</i>
+                    <div>
+                        <strong>Rating:</strong><br>
+                        3.2 stars (10 Google reviews)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dastarkhwan. All rights reserved. | Authentic Afghan Cuisine</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
