@@ -161,8 +161,50 @@
             font-size: 1.2rem;
         }
 
-        .menu-placeholder {
+        .menu-items {
             text-align: center;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .menu-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .menu-item h3 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .price {
+            color: #D2691E;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .menu-note {
+            margin-top: 2rem;
             color: #666;
             font-style: italic;
         }
@@ -243,17 +285,45 @@
     <section id="menu" class="menu">
         <div class="container">
             <h2>Our Menu</h2>
-            <div class="menu-placeholder">
-                <p>Our complete menu features traditional Afghan dishes including:</p>
-                <ul style="list-style: none; padding: 2rem 0;">
-                    <li>• Grilled Kabobs and Koftas</li>
-                    <li>• Aromatic Rice Pilafs</li>
-                    <li>• Fresh Naan and Flatbreads</li>
-                    <li>• Traditional Afghan Soups and Stews</li>
-                    <li>• Fresh Salads and Appetizers</li>
-                    <li>• Authentic Afghan Desserts</li>
-                </ul>
-                <p><em>Menu subject to change. Please call ahead for current offerings.</em></p>
+            <div class="menu-items">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3>Peshawari Beef</h3>
+                        <p class="price">৳480</p>
+                        <p>Traditional Afghan beef dish with rich spices</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Chicken Karahi</h3>
+                        <p class="price">৳440</p>
+                        <p>Spicy chicken curry cooked in a traditional wok</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Kabuli Beef</h3>
+                        <p class="price">৳480</p>
+                        <p>Tender beef with chickpeas in aromatic gravy</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Chicken Butter Masala</h3>
+                        <p class="price">৳480</p>
+                        <p>Creamy chicken curry with butter and spices</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Tawa Liver</h3>
+                        <p class="price">৳480</p>
+                        <p>Grilled liver with traditional spices</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Tawa Beef Keema</h3>
+                        <p class="price">৳490</p>
+                        <p>Minced beef cooked on a hot griddle</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Shahi Paneer</h3>
+                        <p class="price">৳580</p>
+                        <p>Rich paneer cheese in creamy royal sauce</p>
+                    </div>
+                </div>
+                <p class="menu-note"><em>Prices are per serving. Menu subject to change. Please call ahead for current offerings.</em></p>
             </div>
         </div>
     </section>
